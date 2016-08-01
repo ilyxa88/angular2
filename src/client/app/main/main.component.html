@@ -1,0 +1,88 @@
+<div class="container-fluid main" mainfull>
+  <div class="content-list-box col-sm-7">
+    <div class="header-panel clearfix">
+      <div class="search-panel col-xs-7 col-sm-7 col-md-8 col-lg-9">
+        <form class="form-wrapper">
+          <label for="">
+            <input type="text" id="search" class="input-search" placeholder="Address city metro" required>
+            <i  class="btn-search gradient" role="button"></i>
+          </label>
+        </form>
+      </div>
+      <div class="pay-panel col-xs-5 col-sm-5 col-md-4 col-lg-3">
+        <button class="btn-pay" (click)="openPayModal()"><i class="fa fa-usd" aria-hidden="true"></i>Pay</button>
+        <div class="wrap-tooltip">
+          <button class="btn-tooltip" tooltip-placement="bottom-left" uib-tooltip="text text text text text..."><i class="fa fa-question-circle" aria-hidden="true"></i></button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="list-panel" ui-match-height=".brand__item">
+      <div class="box-info col-xs-6 col-sm-6 brand__item"  *ngFor="let movie of listData">
+        <a >
+          <div class="box-view">
+            <div class="discount-icon"><span>25%</span></div>
+            <div class="box-img v-1">
+              <span class="discounts">-25%</span>
+            </div>
+          </div>
+          <h1>test</h1>
+          <p>text text text</p>
+        </a>
+      </div>
+      <div class="list-pagination" >
+        <!--<uib-pagination-->
+          <!--items-per-page="20"-->
+          <!--max-size="3"-->
+          <!--total-items="num"-->
+          <!--ng-model="currentPage"-->
+          <!--ng-change="pageChanged()"-->
+          <!--boundary-links="false"-->
+          <!--rotate="false"-->
+        <!--&gt;-->
+        <!--</uib-pagination>-->
+      </div>
+    </div>
+  </div>
+  <div class="container-map col-sm-5">
+    <!-- <ng-map zoom="13" center="Minsk"class="container-map">
+            <custom-marker ng-repeat="cm in customMarkers" position="{{cm.address}}" >
+                  <div class="">
+                      <div class="box-view" ng-class="{'invisible': marker}">
+                        <div class="box-img v-1">
+                            <span class="custom-marker-discounts">-25%</span>
+                            <span class="custom-marker-description">
+                                <h1>Brand Name</h1>
+                                <p>Address will goes here</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="marker" ng-click="marker=!marker"></div>
+                  </div>
+            </custom-marker>
+        </ng-map> -->
+    <!--<ng-map default-style="true" zoom="4" center="Minsk" class="container-map">-->
+
+      <!--<info-window id="myInfoWindow" >-->
+        <!--<div ng-non-bindable>-->
+          <!--<div class="info-box-view" >-->
+            <!--<div class="box-img v-1">-->
+              <!--<span class="custom-marker-discounts">-25%</span>-->
+              <!--<span class="custom-marker-description">-->
+								<!--<h1>{{deal.name}}</h1>-->
+								<!--<p>{{deal.address}}</p>-->
+							<!--</span>-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</info-window>-->
+
+      <!--<marker ng-repeat="d in deals"-->
+              <!--position="{{d.pos}}" title="{{d.name}}"  id="{{d.id}}"  on-click="showCity(event, d)" icon="images/marker.png">-->
+      <!--</marker>-->
+
+    <!--</ng-map>-->
+  </div>
+</div>
