@@ -6,9 +6,9 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
  */
 @Component({
   moduleId: module.id,
-  selector: 'guileo-navbar',
-  templateUrl: 'navbar.component.html',
-  styleUrls: ['navbar.component.css'],
+  selector: 'guileo-footerbar',
+  templateUrl: 'footerbar.component.html',
+  styleUrls: ['footerbar.component.css'],
   directives: [ROUTER_DIRECTIVES]
 })
-export class NavbarComponent {}
+export class FooterbarComponent {}

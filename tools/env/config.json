@@ -1,6 +1,6 @@
 {
   "dev": {
-    "API": "https://demo.com"
+    "API": "https://demo1.com"
   },
   "prod": {
     "API": "https://prod.com"

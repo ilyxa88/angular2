@@ -15242,7 +15242,7 @@ html, body {
 /* line 11, ../../app/styles/pages/_menu.scss */
 .header .logo {
   display: block;
-  background: url(../images/logo.png) center center no-repeat;
+  background: url(../assets/images/logo.png) center center no-repeat;
   height: 50px;
   width: 180px;
   background-size: contain;
@@ -15427,7 +15427,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
-  background: url(../images/social-icons.png) no-repeat top right;
+  background: url(../assets/images/social-icons.png) no-repeat top right;
   background-size: cover;
   width: 21px;
   height: 21px;
