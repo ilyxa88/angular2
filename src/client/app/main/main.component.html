@@ -21,8 +21,7 @@
     </div>
     <div class="list-panel">
       <div class="box-info col-xs-6 col-sm-6 brand__item"  *ngFor="let movie of [1,2,3,4,5,6]">
-        <a >
-          <h1>hello</h1>
+        <a [routerLink]="['/detail']">
           <div class="box-view">
             <div class="discount-icon"><span>28%</span></div>
             <div class="box-img v-1">
@@ -34,20 +33,13 @@
         </a>
       </div>
       <div class="list-pagination" >
-        <!--<uib-pagination-->
-          <!--items-per-page="20"-->
-          <!--max-size="3"-->
-          <!--total-items="num"-->
-          <!--ng-model="currentPage"-->
-          <!--ng-change="pageChanged()"-->
-          <!--boundary-links="false"-->
-          <!--rotate="false"-->
-        <!--&gt;-->
-        <!--</uib-pagination>-->
+        <pagination [totalItems]="bigTotalItems" [(ngModel)]="bigCurrentPage" [maxSize]="maxSize" class="pagination-sm"
+        [boundaryLinks]="true" [rotate]="false" (numPages)="numPages = $event"></pagination>
       </div>
     </div>
   </div>
   <div class="container-map col-sm-5">
+    <ng2-map [center]="Minsk" class="container-map"></ng2-map>
     <!-- <ng-map zoom="13" center="Minsk"class="container-map">
             <custom-marker ng-repeat="cm in customMarkers" position="{{cm.address}}" >
                   <div class="">

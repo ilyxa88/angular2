@@ -5,8 +5,10 @@ declare var $ : any;
   selector:'[fullMain]'
 })
 
-export class FullMainDirective  implements OnInit{
-  constructor(private _elRef:ElementRef,private renderer: Renderer, private _window: Window){}
+export class FullMainDirective  {
+  constructor(private _elRef:ElementRef,private renderer: Renderer, private _window: Window){
+
+  }
   updateMain(){
     let win_h:any,
       menu_h:any,
@@ -33,8 +35,6 @@ export class FullMainDirective  implements OnInit{
 
   ngOnInit(){
     this.updateMain();
-    $( this._window ).resize(function() {
-      this.updateMain();
-    });
+    $( this._window ).resize(() => this.updateMain());
   }
 }

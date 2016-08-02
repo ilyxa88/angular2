@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ROUTER_DIRECTIVES } from '@angular/router';
 
 /**
  * This class represents the lazy loaded HomeComponent.
@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
   moduleId: module.id,
   selector: 'quileo-detail',
   templateUrl: 'detail.component.html',
-  styleUrls: ['detail.component.css']
+  styleUrls: ['detail.component.css'],
+  directives: [ROUTER_DIRECTIVES]
 })
 export class DetailComponent implements OnInit {
 
