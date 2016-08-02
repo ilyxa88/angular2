@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewContainerRef } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
 import { HTTP_PROVIDERS } from '@angular/http';
 
@@ -16,7 +16,7 @@ import { Config, NameListService, NavbarComponent, FooterbarComponent } from './
   directives: [ROUTER_DIRECTIVES, NavbarComponent, FooterbarComponent]
 })
 export class AppComponent {
-  constructor() {
+  constructor(public viewContainerRef:ViewContainerRef) {
     console.log('Environment config1', Config);
   }
 }

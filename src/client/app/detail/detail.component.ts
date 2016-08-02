@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ROUTER_DIRECTIVES } from '@angular/router';
-
+import {MODAL_DIRECTIVES, BS_VIEW_PROVIDERS} from 'ng2-bootstrap';
 /**
  * This class represents the lazy loaded HomeComponent.
  */
@@ -9,7 +9,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
   selector: 'quileo-detail',
   templateUrl: 'detail.component.html',
   styleUrls: ['detail.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES, MODAL_DIRECTIVES],
+  viewProviders:[BS_VIEW_PROVIDERS]
 })
 export class DetailComponent implements OnInit {
 
